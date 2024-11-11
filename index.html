@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- create a main content container wrap for calculator -->
+    <div class="container">
+      <!-- content left container for tip calculator inputs -->
+      <div class="left-content-wrap">
+        <div class="bill-amount-wrap">
+          <label for="bill-amount">$</label>
+          <input type="number" id="bill-amount" placeholder="0.00" />
+        </div>
+        <div class="select-tip-wrap">
+          <label class="select-tip-label" for="select-tip">Select Tip %</label>
+          <div class="tip-buttons-wrap">
+            <div class="tip-button-sub-wrap1">
+              <button class="tip-button">5%</button>
+              <button class="tip-button">10%</button>
+              <button class="tip-button">15%</button>
+            </div>
+            <div class="tip-button-sub-wrap2">
+              <button class="tip-button">25%</button>
+              <button class="tip-button">50%</button>
+              <input class="tip-button-custom" type="number" id="custom-tip" placeholder="Custom" />
+            </div>
+          </div>
+        </div>
+        <div class="people">
+         <div class="lbl-wrap-error-wrap">
+          <label for="people">Number of People</label>
+          <p class="error-txt-msg" style="display: none;">Please Enter an Amount</p>
+         </div>
+          <div class="input-div-people">
+            <input type="number" id="people" placeholder="0" />
+          </div>
+        </div>
+      </div>
+      <!-- content right container for displaying the amount after calculation-->
+      <div class="right-content-wrap">
+        <div class="top-right-wrap">
+          <div class="tip-amount-wrap">
+            <div class="taw-sub-wrap"> 
+              <h4>Tip Amount</h4>
+              <p>/ person</p>
+            </div>
+            <div class="tip-amount">0.00</div>
+          </div>
+          <div class="total">
+            <div class="total-sub-wrap">
+              <h4>Total</h4>
+              <p>/ person</p>
+            </div>
+            <div class="total-amount">0.00</div>
+          </div>
+        </div>
+        <button class="right-reset-button">Reset</button>
+      </div>
+    </div>
+    <!-- Close container (END)-->
+    <script src="./main.js"></script>
+  </body>
+</html>

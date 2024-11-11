@@ -1,0 +1,333 @@
+:root {
+    --body-bg-color: #F5F1FB;
+    --right-content-wrap-bg-color: #00474a;
+    --right-content-text-color: #9abfc5;
+    --right-smaller-text-color: #9abfc5;
+    --tip-btn-bg-color: #EFE9F9;
+    --dark-tip-btn-bg-color: #996FD5;
+    --right-tip-number-color: #37b2a3;
+    --right-reset-text-color: #C4ABE7;
+    --right-reset-text-color2: #366563;
+    --input-bg-color: #f2f8fb;
+    --tip-number-color: #996FD5;
+
+    /* font */
+    --font-text: 'poetsenone', sans-serif;
+} 
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Add this to ensure padding and border are included in the element's total width and height */
+}
+
+body {
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font-text);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+    width: 62vw;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    gap: 1.5rem;
+    position: relative;
+}
+
+/* Cotent inside container styles */
+.left-content-wrap {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.right-content-wrap {
+    width: 50%;
+    height: 100%;
+    background-color: var(--dark-tip-btn-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.top-right-wrap {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.tip-amount-wrap, .total {
+    display: flex;
+    padding: 10.5px 0px;
+    justify-content: space-between;
+    height: fit-content;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.taw-sub-wrap, .total-sub-wrap h4 {
+    color: var(--right-content-text-color);
+    font-family: sans-serif;
+}
+.taw-sub-wrap, .total-sub-wrap p {
+    color: var(--right-smaller-text-color);
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.tip-amount, .total-amount {
+    font-size: 2rem;
+    max-width: 10rem;
+    min-width: 1rem;
+    font-family: 'poetsenone', sans-serif;
+    color: var(--right-tip-number-color);
+}
+
+.right-reset-button {
+    height: 36px;
+    background: var(--right-reset-text-color);
+    width: 85%;
+    margin: auto;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 4px 4px 10px 1px #000000a1;
+}
+
+/* left content styles */
+.bill-amount-wrap {
+    height: 2.5em;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    background-color: var(--input-bg-color);
+}
+
+#bill-amount, #people {
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    width: fit-content;
+    max-width: 70%;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+.select-tip-wrap {
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tip-buttons-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.select-tip-label {
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--right-content-wrap-bg-color);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tip-button-sub-wrap1, .tip-button-sub-wrap2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tip-button {
+    width: 35%;
+    height: 50px;
+    background-color: var(--tip-btn-bg-color);
+    border-radius: 5px;
+    border: none;
+    color: var(--tip-number-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 700;
+}
+.tip-button:hover {
+    background-color: var(--dark-tip-btn-bg-color);
+    transition: ease-in-out 0.2s;
+    color: var(--tip-btn-bg-color);
+
+}
+
+.tip-button.active {
+    background-color: var(--light-tip-btn-bg-color);
+    color: var(--tip-btn-bg-color);
+    box-shadow: 3px 4px 8px #00000091;
+    transition: ease-in-out 0.1s;
+}
+
+.tip-button-custom {
+    width: 35%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--light-tip-btn-bg-color);
+    color: var(--right-content-text-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-div-people {
+    height: 2.5em;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 10px;
+    background-color: var(--input-bg-color);
+}
+
+.lbl-wrap-error-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.error-txt-msg {
+    font-size: 12px;
+    color: red;
+}
+
+.input-div-people.error {
+    border: 1px solid red;
+
+}
+
+.custom-tip-zero-msg {
+    background-color: var(--input-bg-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+    width: 40%;
+    box-shadow: 0px 0px 9px 3px;
+    border-radius: 8px;
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.custom-tip-zero-img {
+    height: 65%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: none;
+    border: none;
+    color: darkgrey;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: monospace;
+}
+
+.yes-no-wrap {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.yes-btn, .no-btn {
+    width: 45%;
+}
+/* Styles for mobile (screen width 600px or less) */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: 80vh;
+        width: 90vw;
+    }
+
+    .right-content-wrap, .left-content-wrap {
+        width: 100%;
+    }
+
+    .select-tip-wrap {
+        height: 50%;
+    }
+
+    .select-tip-label {
+        margin-bottom: 0;
+    }
+
+    .tip-button, .tip-button-custom {
+        height: 30px;
+    }
+
+    .tip-button-custom {
+        font-size: 15px;
+    }
+
+}
+
+/* Styles for screens with width between 601px and 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 67vw; 
+    }
+}
+
+@media screen and (max-width: 1092px) and (max-height: 614px) {
+    .tip-button, .tip-button-custom {
+        width: 30%;
+        height: 36px;
+    }
+
+    .select-tip-wrap {
+        height: 46%;
+    }
+
+    .taw-sub-wrap, .total-sub-wrap p, .total-sub-wrap h4 {
+        font-size: 0.5em;
+    }
+
+    .tip-amount, .total-amount {
+        font-size: 1.25rem;
+    }
+
+    .bill-amount-wrap, .input-div-people {
+        height: 1.5em;
+    }
+}
