@@ -43,11 +43,12 @@
           </div>
         </div>
         <div class="people">
-         <div class="lbl-wrap-error-wrap">
-          <label for="people">Number of People</label>
-          <p class="error-txt-msg" style="display: none;">Please Enter an Amount</p>
-         </div>
+         
           <div class="input-div-people">
+            <div class="lbl-wrap-error-wrap">
+                <label for="people">Number of People</label>
+                <p class="error-txt-msg" style="display: none;">Please Enter an Amount</p>
+               </div>
             <input type="number" id="people" placeholder="0" />
           </div>
         </div>
@@ -60,14 +61,31 @@
               <h4>Tip Amount</h4>
               <p>/ person</p>
             </div>
-            <div class="tip-amount">0.00</div>
+            <div class="tip-icon-wrap">
+                <div class="tiw-sub-wrap">
+                    <img src="./assets/icomoon-free_price-tags.png" alt="">
+                </div>
+            </div>
+            <!-- in the JS this needs to change -->
+            <!-- <div class="tip-amount">0.00</div> -->
+            <!-- <div class="tip-amount">
+                <img src="./assets/icomoon-free_price-tags.png" alt="">
+            </div> -->
           </div>
           <div class="total">
             <div class="total-sub-wrap">
-              <h4>Total</h4>
-              <p>/ person</p>
+                <div class="total-amount">0.00</div>
+             <div class="person-amount">
+                <h4>Total</h4>
+                <p>/ person</p>
+             </div>
             </div>
-            <div class="total-amount">0.00</div>
+            <div class="tip-icon-wrap">
+                <div class="tiw-sub-wrap">
+                    <img src="./assets/icomoon-free_price-tags.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="total-amount">0.00</div> -->
           </div>
         </div>
         <button class="right-reset-button">Reset</button>
