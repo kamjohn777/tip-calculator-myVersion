@@ -24,11 +24,15 @@
       <!-- content left container for tip calculator inputs -->
       <div class="left-content-wrap">
         <div class="bill-amount-wrap">
-          <label for="bill-amount">$</label>
+          <!-- <label for="bill-amount">$</label> -->
+        <div class="bill-amount-txt-wrap">
+          <img src="./assets/Vector.png" alt="">
+          <p>Enter Bill Amount</p>
+        </div>
           <input type="number" id="bill-amount" placeholder="0.00" />
         </div>
         <div class="select-tip-wrap">
-          <label class="select-tip-label" for="select-tip">Select Tip %</label>
+          <label class="select-tip-label" for="select-tip">Select Below Tip Amount %</label>
           <div class="tip-buttons-wrap">
             <div class="tip-button-sub-wrap1">
               <button class="tip-button">5%</button>
@@ -43,11 +47,12 @@
           </div>
         </div>
         <div class="people">
-         
+          <p class="error-txt-msg" style="display: none;">Please Enter an Amount</p>
           <div class="input-div-people">
+            <img src="./assets/Vector (1).png" alt="">
             <div class="lbl-wrap-error-wrap">
-                <label for="people">Number of People</label>
-                <p class="error-txt-msg" style="display: none;">Please Enter an Amount</p>
+                <label class="label-num-text" for="people">Enter Number of People</label>
+                
                </div>
             <input type="number" id="people" placeholder="0" />
           </div>
@@ -58,23 +63,22 @@
         <div class="top-right-wrap">
           <div class="tip-amount-wrap">
             <div class="taw-sub-wrap"> 
-              <h4>Tip Amount</h4>
+               <!-- in the JS this needs to change -->
+            <div class="tip-amount"><strong>$</strong>0.00</div>
+              <div class="total-amount-bill">
+                <h4>Tip Amount</h4>
               <p>/ person</p>
+              </div>
             </div>
             <div class="tip-icon-wrap">
                 <div class="tiw-sub-wrap">
                     <img src="./assets/icomoon-free_price-tags.png" alt="">
                 </div>
             </div>
-            <!-- in the JS this needs to change -->
-            <!-- <div class="tip-amount">0.00</div> -->
-            <!-- <div class="tip-amount">
-                <img src="./assets/icomoon-free_price-tags.png" alt="">
-            </div> -->
           </div>
           <div class="total">
             <div class="total-sub-wrap">
-                <div class="total-amount">0.00</div>
+                <div class="total-amount"><strong>$</strong>0.00</div>
              <div class="person-amount">
                 <h4>Total</h4>
                 <p>/ person</p>
