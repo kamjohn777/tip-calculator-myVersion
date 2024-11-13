@@ -141,6 +141,16 @@ body {
     left: 3%;
 }
 
+.tip-circle-elm2 {
+    height: 20px;
+    width: 20px;
+    background-color: var(--dark-tip-btn-bg-color);
+    border-radius: 50%;
+    position: relative;
+    top: 26%;
+    left: 3%;
+}
+
 .tip-amount-wrap,
 .total {
   display: flex;
@@ -392,8 +402,16 @@ input:focus {
 @media screen and (max-width: 900px) {
   .container {
     flex-direction: column;
-    height: 80vh;
+    height: 94vh;
     width: 90vw;
+  }
+
+  .bill-amount-txt-wrap {
+    width: 40%;
+  }
+
+  .bill-amount-txt-wrap img {
+    height: 20px;
   }
 
   .right-content-wrap,
@@ -411,11 +429,32 @@ input:focus {
 
   .tip-button,
   .tip-button-custom {
-    height: 30px;
+    height: 45px;
   }
 
   .tip-button-custom {
     font-size: 15px;
+  }
+
+  .taw-sub-wrap, .total-sub-wrap {
+  }
+
+  .tip-amount-wrap, .total {
+    padding: 0;
+  }
+
+  #people {
+    max-width: 30%;
+  }
+
+  .top-right-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-reset-button {
+    margin: 12px auto;
   }
 }
 
@@ -423,6 +462,78 @@ input:focus {
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .container {
     width: 67vw;
+  }
+
+  .bill-amount-txt-wrap {
+    width: 40%;
+  }
+
+  .bill-amount-txt-wrap img {
+    height: 20px;
+  }
+
+  .bill-amount-wrap, .input-div-people {
+    height: 2rem;
+    padding: 7px;
+  }
+
+  #bill-amount {
+    max-width: 50%;
+  }
+
+  .left-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-content-wrap,
+  .left-content-wrap {
+    width: 100%;
+  }
+
+  .select-tip-wrap {
+    height: 60%;
+}
+  .select-tip-label {
+    margin-bottom: 0;
+  }
+
+  .tip-buttons-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+  .tip-button,
+  .tip-button-custom {
+    height: 45px;
+  }
+
+  .tip-button-custom {
+    font-size: 15px;
+  }
+
+  .taw-sub-wrap, .total-sub-wrap {
+  }
+
+  .tip-amount-wrap, .total {
+    padding: 0;
+  }
+
+  #people {
+    max-width: 30%;
+  }
+
+  .top-right-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-reset-button {
+    margin: 12px auto;
   }
 }
 
@@ -453,3 +564,99 @@ input:focus {
     height: 1.5em;
   }
 }
+
+
+
+
+
+/* just added this can add if i want but im trying to update just a few styles for the screens 500 and less
+ */
+@media screen and (max-width: 500px) {
+    .container {
+      height: 94vh;
+    }
+  
+    .left-content-wrap,
+    .right-content-wrap {
+      width: 100%;
+      height: 50%;
+    }
+  
+    .bill-amount-wrap {
+      height: 2em;
+      padding-left: 5px;
+    }
+  
+    .bill-amount-txt-wrap {
+      width: 50%;
+    }
+  
+    .bill-amount-txt-wrap img {
+      height: 15px;
+    }
+  
+    #bill-amount,
+    #people {
+      font-size: 16px;
+      max-width: 100%;
+    }
+  
+    .select-tip-wrap {
+      height: auto;
+    }
+  
+    .select-tip-label {
+      margin-bottom: 5px;
+    }
+  
+    .tip-button,
+    .tip-button-custom {
+      height: 35px;
+      font-size: 14px;
+    }
+  
+    .tip-amount-wrap,
+    .total {
+      padding: 5px 0;
+      width: 100%;
+    }
+  
+    .taw-sub-wrap,
+    .total-sub-wrap {
+      font-size: 0.8em;
+      width: 100%;
+      height: auto;
+    }
+  
+    .total-amount,
+    .tip-amount {
+      font-size: 1.5rem;
+    }
+  
+    .right-reset-button {
+      height: 30px;
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    .top-right-wrap {
+      width: 100%;
+      gap: 5px;
+    }
+  
+    .tip-icon-wrap {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+    .tiw-sub-wrap {
+      height: 40px;
+      width: 40px;
+    }
+  
+    .tip-circle-elm,
+    .tip-circle-elm2 {
+      height: 15px;
+      width: 15px;
+    }
+  }
