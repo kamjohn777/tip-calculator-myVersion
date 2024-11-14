@@ -15,6 +15,9 @@ const errorText = document.querySelector(".error-txt-msg");
 // Select the reset button
 const resetButton = document.querySelector(".right-reset-button");
 
+// Select the overlay element
+const overlay = document.getElementById("overlay");
+
 // Function to validate inputs
 function validateInputs() {
   const billAmount = parseFloat(billAmountInput.value);
@@ -81,9 +84,15 @@ customTipInput.addEventListener("input", () => {
 
   if (customTipPercentage === 0) {
     let newCustomDivMsg = document.createElement("div");
-    newCustomDivMsg.innerHTML = `<div class="custom-tip-zero-msg">
+    newCustomDivMsg.innerHTML = `
+    <div class="custom-tip-zero-msg">
+      <div class="custom-circle-div">
+        <div class="custom-sub-div">
+          <img class="" src="./assets/Group 1261157452.png">
+        </div>
+      </div>
         <img class="custom-tip-zero-img" src="./assets/Screenshot_2024-09-29_152710-removebg-preview.png">
-            <p>Pwase leave a tip?</p>
+        <p>Pwase leave a tip?</p>
             <button class="close-btn">X</button>
             <div class="yes-no-wrap">
                 <button class="yes-btn">Yes</button>
@@ -96,11 +105,16 @@ customTipInput.addEventListener("input", () => {
 
     container.appendChild(newCustomDivMsg);
 
+    // Show the overlay
+    overlay.style.display = "block";
+
     const addEventListeners = () => {
       // adding event listener to the close button
       const closeBtn = newCustomDivMsg.querySelector(".close-btn");
       closeBtn.addEventListener("click", () => {
         newCustomDivMsg.remove();
+        // Hide the overlay
+        overlay.style.display = "none";
       });
 
       // adding event listener to the yes button
@@ -108,14 +122,21 @@ customTipInput.addEventListener("input", () => {
       yesBtn.addEventListener("click", () => {
         newCustomDivMsg.remove();
         customTipInput.value = "";
+        // Hide the overlay
+        overlay.style.display = "none";
       });
 
       // adding event listener to the no button
       const noBtn = newCustomDivMsg.querySelector(".no-btn");
       noBtn.addEventListener("click", () => {
         newCustomDivMsg.innerHTML = `<div class="custom-tip-zero-msg">
+        <div class="custom-circle-div">
+        <div class="custom-sub-div">
+          <img class="" src="./assets/Group 1261157452.png">
+        </div>
+      </div>
         <img class="custom-tip-zero-img" src="./assets/Screenshot 2024-09-30 140200.png">
-            <p>If you're broke just say that</p>
+            <p>If you're broke just say that!</p>
             <button class="close-btn">X</button>
             <div class="yes-no-wrap">
                 <button class="yes-btn">Yes</button>

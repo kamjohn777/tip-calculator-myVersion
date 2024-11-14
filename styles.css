@@ -1,4 +1,5 @@
 :root {
+  --basic-white: #fff;
   --body-bg-color: #f5f1fb;
   --right-content-wrap-bg-color: #00474a;
   --right-content-text-color: #9abfc5;
@@ -24,7 +25,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /* Add this to ensure padding and border are included in the element's total width and height */
+  box-sizing: border-box;
 }
 
 body {
@@ -37,34 +38,45 @@ body {
   font-family: var(--font-text);
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
 .circle {
-    position: fixed;
-    width: 700px;
-    height: 700px;
-    background-color: var(--circle-color);
-    border-radius: 50%;
-    clip-path: circle(121% at 27% 13%);
-  }
-  .circle2 {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    background-color: var(--circle-color);
-    border-radius: 50%;
-    clip-path: circle(99% at 13% 36%);
-  }
-  
-  .top-left {
-    top: 0;
-    left: 0;
-    transform: translate(-19%, -17%);
-  }
-  
-  .top-right {
-    top: 0;
-    right: 0;
-    transform: translate(16%, 95%);
-  }
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background-color: var(--circle-color);
+  border-radius: 50%;
+  clip-path: circle(121% at 27% 13%);
+}
+.circle2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background-color: var(--circle-color);
+  border-radius: 50%;
+  clip-path: circle(99% at 13% 36%);
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  transform: translate(-19%, -17%);
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  transform: translate(16%, 95%);
+}
 
 .container {
   display: flex;
@@ -132,23 +144,23 @@ body {
   align-items: center;
 }
 .tip-circle-elm {
-    height: 20px;
-    width: 20px;
-    background-color: var(--dark-tip-btn-bg-color);
-    border-radius: 50%;
-    position: relative;
-    top: 26%;
-    left: 3%;
+  height: 20px;
+  width: 20px;
+  background-color: var(--dark-tip-btn-bg-color);
+  border-radius: 50%;
+  position: relative;
+  top: 26%;
+  left: 3%;
 }
 
 .tip-circle-elm2 {
-    height: 20px;
-    width: 20px;
-    background-color: var(--dark-tip-btn-bg-color);
-    border-radius: 50%;
-    position: relative;
-    top: 26%;
-    left: 3%;
+  height: 20px;
+  width: 20px;
+  background-color: var(--dark-tip-btn-bg-color);
+  border-radius: 50%;
+  position: relative;
+  top: 26%;
+  left: 3%;
 }
 
 .tip-amount-wrap,
@@ -194,22 +206,11 @@ body {
 }
 
 .total-amount-bill {
-    color: #fff;
-    display: flex;
-    margin-left: 15px;
-    margin-top: 2px;
+  color: #fff;
+  display: flex;
+  margin-left: 15px;
+  margin-top: 2px;
 }
-/* .tip-amount, .total-amount {
-    font-size: 2rem;
-    max-width: 10rem;
-    width: 5.9rem;
-    height: 5.5rem;
-    min-width: 1rem;
-    font-family: 'poetsenone', sans-serif;
-    color: var(--right-tip-number-color);
-    background: var(--right-tip-containers);
-    border-radius: 8px;
-} */
 
 .right-reset-button {
   height: 36px;
@@ -356,13 +357,13 @@ input:focus {
 }
 
 .custom-tip-zero-msg {
-  background-color: var(--input-bg-color);
+  background-color: var(--basic-white);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 40%;
-  width: 40%;
+  height: 49%;
+  width: 48%;
   box-shadow: 0px 0px 9px 3px;
   border-radius: 8px;
   transition: opacity 0.4s ease-in-out;
@@ -370,10 +371,42 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  z-index: 1000;
+}
+
+.custom-sub-div {
+  background: var(--dark-tip-btn-bg-color);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-circle-div {
+  background: var(--basic-white);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 84%;
+}
+
+.custom-sub-div img {
+  height: 50px;
 }
 
 .custom-tip-zero-img {
-  height: 65%;
+  height: 36%;
+  margin-top: 24px;
+}
+
+.custom-tip-zero-msg p {
+  font-size: 25px;
 }
 
 .close-btn {
@@ -389,16 +422,29 @@ input:focus {
 }
 
 .yes-no-wrap {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
 }
 
+.yes-btn {
+  background-color: var(--dark-active-btn);
+  color: var(--body-bg-color);
+}
+
+.no-btn {
+  background-color: transparent;
+  color: var(--dark-tip-btn-bg-color);
+}
+
 .yes-btn,
 .no-btn {
-  width: 45%;
+  width: 41%;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--dark-active-btn);
 }
-/* Styles for mobile (screen width 600px or less) */
+/* Styles for mobile (screen width 900px or less) */
 @media screen and (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -436,10 +482,8 @@ input:focus {
     font-size: 15px;
   }
 
-  .taw-sub-wrap, .total-sub-wrap {
-  }
-
-  .tip-amount-wrap, .total {
+  .tip-amount-wrap,
+  .total {
     padding: 0;
   }
 
@@ -472,7 +516,8 @@ input:focus {
     height: 20px;
   }
 
-  .bill-amount-wrap, .input-div-people {
+  .bill-amount-wrap,
+  .input-div-people {
     height: 2rem;
     padding: 7px;
   }
@@ -494,7 +539,7 @@ input:focus {
 
   .select-tip-wrap {
     height: 60%;
-}
+  }
   .select-tip-label {
     margin-bottom: 0;
   }
@@ -504,7 +549,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
+  }
 
   .tip-button,
   .tip-button-custom {
@@ -515,10 +560,8 @@ input:focus {
     font-size: 15px;
   }
 
-  .taw-sub-wrap, .total-sub-wrap {
-  }
-
-  .tip-amount-wrap, .total {
+  .tip-amount-wrap,
+  .total {
     padding: 0;
   }
 
@@ -565,98 +608,187 @@ input:focus {
   }
 }
 
-
-
-
-
 /* just added this can add if i want but im trying to update just a few styles for the screens 500 and less
  */
 @media screen and (max-width: 500px) {
-    .container {
-      height: 94vh;
-    }
-  
-    .left-content-wrap,
-    .right-content-wrap {
-      width: 100%;
-      height: 50%;
-    }
-  
-    .bill-amount-wrap {
-      height: 2em;
-      padding-left: 5px;
-    }
-  
-    .bill-amount-txt-wrap {
-      width: 50%;
-    }
-  
-    .bill-amount-txt-wrap img {
-      height: 15px;
-    }
-  
-    #bill-amount,
-    #people {
-      font-size: 16px;
-      max-width: 100%;
-    }
-  
-    .select-tip-wrap {
-      height: auto;
-    }
-  
-    .select-tip-label {
-      margin-bottom: 5px;
-    }
-  
-    .tip-button,
-    .tip-button-custom {
-      height: 35px;
-      font-size: 14px;
-    }
-  
-    .tip-amount-wrap,
-    .total {
-      padding: 5px 0;
-      width: 100%;
-    }
-  
-    .taw-sub-wrap,
-    .total-sub-wrap {
-      font-size: 0.8em;
-      width: 100%;
-      height: auto;
-    }
-  
-    .total-amount,
-    .tip-amount {
-      font-size: 1.5rem;
-    }
-  
-    .right-reset-button {
-      height: 30px;
-      width: 90%;
-      margin: 10px auto;
-    }
-  
-    .top-right-wrap {
-      width: 100%;
-      gap: 5px;
-    }
-  
-    .tip-icon-wrap {
-      width: 4rem;
-      height: 4rem;
-    }
-  
-    .tiw-sub-wrap {
-      height: 40px;
-      width: 40px;
-    }
-  
-    .tip-circle-elm,
-    .tip-circle-elm2 {
-      height: 15px;
-      width: 15px;
-    }
+  .container {
+    height: 94vh;
   }
+
+  .left-content-wrap,
+  .right-content-wrap {
+    width: 100%;
+    height: 50%;
+  }
+
+  .bill-amount-wrap {
+    height: 2em;
+    padding-left: 5px;
+  }
+
+  .bill-amount-txt-wrap {
+    width: 50%;
+  }
+
+  .bill-amount-txt-wrap img {
+    height: 15px;
+  }
+
+  #bill-amount,
+  #people {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .select-tip-wrap {
+    height: auto;
+  }
+
+  .select-tip-label {
+    margin-bottom: 5px;
+  }
+
+  .tip-button,
+  .tip-button-custom {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .tip-amount-wrap,
+  .total {
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  .taw-sub-wrap,
+  .total-sub-wrap {
+    font-size: 0.8em;
+    width: 100%;
+    height: auto;
+  }
+
+  .total-amount,
+  .tip-amount {
+    font-size: 1.5rem;
+  }
+
+  .right-reset-button {
+    height: 30px;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .top-right-wrap {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .tip-icon-wrap {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .tiw-sub-wrap {
+    height: 40px;
+    width: 40px;
+  }
+
+  .tip-circle-elm,
+  .tip-circle-elm2 {
+    height: 15px;
+    width: 15px;
+  }
+}
+/* just added this as well 11/14/2024 */
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .container {
+    width: 75vw;
+    height: auto;
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+
+  .left-content-wrap,
+  .right-content-wrap {
+    width: 48%;
+    height: auto;
+  }
+
+  .bill-amount-wrap {
+    height: 2.5em;
+    padding-left: 10px;
+  }
+
+  .bill-amount-txt-wrap {
+    width: 40%;
+  }
+
+  .bill-amount-txt-wrap img {
+    height: 20px;
+  }
+
+  #bill-amount,
+  #people {
+    font-size: 18px;
+    max-width: 80%;
+  }
+
+  .select-tip-wrap {
+    height: auto;
+  }
+
+  .select-tip-label {
+    margin-bottom: 10px;
+  }
+
+  .tip-button,
+  .tip-button-custom {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .tip-amount-wrap,
+  .total {
+    padding: 10px 0;
+    width: 95%;
+  }
+
+  .taw-sub-wrap,
+  .total-sub-wrap {
+    font-size: 0.9em;
+    width: 80%;
+    height: auto;
+  }
+
+  .total-amount,
+  .tip-amount {
+    font-size: 2rem;
+  }
+
+  .right-reset-button {
+    height: 36px;
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .top-right-wrap {
+    width: 95%;
+    gap: 10px;
+  }
+
+  .tip-icon-wrap {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .tiw-sub-wrap {
+    height: 50px;
+    width: 50px;
+  }
+
+  .tip-circle-elm,
+  .tip-circle-elm2 {
+    height: 20px;
+    width: 20px;
+  }
+}
