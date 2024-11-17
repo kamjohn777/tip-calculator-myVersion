@@ -610,7 +610,7 @@ input:focus {
 
 /* just added this can add if i want but im trying to update just a few styles for the screens 500 and less
  */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (max-height: 900px) {
   .container {
     height: 94vh;
   }
@@ -627,7 +627,7 @@ input:focus {
   }
 
   .bill-amount-txt-wrap {
-    width: 50%;
+    width: 45%;
   }
 
   .bill-amount-txt-wrap img {
@@ -637,11 +637,11 @@ input:focus {
   #bill-amount,
   #people {
     font-size: 16px;
-    max-width: 100%;
+    max-width: 50%;
   }
 
   .select-tip-wrap {
-    height: auto;
+    height: 40%;
   }
 
   .select-tip-label {
@@ -650,21 +650,22 @@ input:focus {
 
   .tip-button,
   .tip-button-custom {
-    height: 35px;
+    height: 50px;
     font-size: 14px;
   }
 
   .tip-amount-wrap,
   .total {
     padding: 5px 0;
-    width: 100%;
+    width: 90%;
+    height: 90%;
   }
 
   .taw-sub-wrap,
   .total-sub-wrap {
     font-size: 0.8em;
-    width: 100%;
-    height: auto;
+    width: 75%;
+    height: 90%;
   }
 
   .total-amount,
@@ -685,7 +686,7 @@ input:focus {
 
   .tip-icon-wrap {
     width: 4rem;
-    height: 4rem;
+    height: 90%;
   }
 
   .tiw-sub-wrap {
@@ -695,23 +696,34 @@ input:focus {
 
   .tip-circle-elm,
   .tip-circle-elm2 {
-    height: 15px;
-    width: 15px;
+    height: 50px;
+    width: 22px;
+    position: relative;
+    top: 26%;
+    left: 5%;
+  }
+
+  .lbl-wrap-error-wrap {
+   font-size: 12px;
+  }
+
+  .input-div-people {
+    padding-right: 10px;
   }
 }
 /* just added this as well 11/14/2024 */
-@media screen and (min-width: 900px) and (max-width: 1300px) {
+@media screen and (min-width: 900px) and (max-width: 1400px) {
   .container {
     width: 75vw;
-    height: auto;
-    flex-direction: row;
+    height: 77vh;
+    /* flex-direction: row; */
     padding: 1.5rem;
   }
 
   .left-content-wrap,
   .right-content-wrap {
     width: 48%;
-    height: auto;
+    height: 100%;
   }
 
   .bill-amount-wrap {
@@ -730,11 +742,11 @@ input:focus {
   #bill-amount,
   #people {
     font-size: 18px;
-    max-width: 80%;
+    max-width: 58%;
   }
 
   .select-tip-wrap {
-    height: auto;
+    height: 45%;
   }
 
   .select-tip-label {
@@ -757,7 +769,7 @@ input:focus {
   .total-sub-wrap {
     font-size: 0.9em;
     width: 80%;
-    height: auto;
+    height: 100%;
   }
 
   .total-amount,
@@ -790,5 +802,13 @@ input:focus {
   .tip-circle-elm2 {
     height: 20px;
     width: 20px;
+  }
+
+  .lbl-wrap-error-wrap {
+    font-size: 12.5px;
+  }
+
+  .input-div-people {
+    padding-left: 10px;
   }
 }
