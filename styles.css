@@ -1,14 +1,10 @@
 :root {
   --basic-white: #fff;
   --body-bg-color: #f5f1fb;
-  --right-content-wrap-bg-color: #00474a;
-  --right-content-text-color: #9abfc5;
-  --right-smaller-text-color: #9abfc5;
+
   --tip-btn-bg-color: #efe9f9;
   --dark-tip-btn-bg-color: #996fd5;
-  --right-tip-number-color: #37b2a3;
   --right-reset-text-color: #c4abe7;
-  --right-reset-text-color2: #366563;
   --input-bg-color: #f2f8fb;
   --tip-number-color: #996fd5;
   --dark-active-btn: #805ab6;
@@ -143,7 +139,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.tip-circle-elm {
+/* .tip-circle-elm {
   height: 20px;
   width: 20px;
   background-color: var(--dark-tip-btn-bg-color);
@@ -161,7 +157,7 @@ body {
   position: relative;
   top: 26%;
   left: 3%;
-}
+} */
 
 .tip-amount-wrap,
 .total {
@@ -694,14 +690,14 @@ input:focus {
     width: 40px;
   }
 
-  .tip-circle-elm,
+  /* .tip-circle-elm,
   .tip-circle-elm2 {
     height: 50px;
     width: 22px;
     position: relative;
     top: 26%;
     left: 5%;
-  }
+  } */
 
   .lbl-wrap-error-wrap {
    font-size: 12px;
@@ -716,7 +712,6 @@ input:focus {
   .container {
     width: 75vw;
     height: 77vh;
-    /* flex-direction: row; */
     padding: 1.5rem;
   }
 
@@ -798,11 +793,11 @@ input:focus {
     width: 50px;
   }
 
-  .tip-circle-elm,
+  /* .tip-circle-elm,
   .tip-circle-elm2 {
     height: 20px;
     width: 20px;
-  }
+  } */
 
   .lbl-wrap-error-wrap {
     font-size: 12.5px;
