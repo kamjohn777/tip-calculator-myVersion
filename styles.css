@@ -661,7 +661,7 @@ input:focus {
   .total-sub-wrap {
     font-size: 0.8em;
     width: 75%;
-    height: 90%;
+    height: 6.5rem;
   }
 
   .total-amount,
@@ -681,8 +681,8 @@ input:focus {
   }
 
   .tip-icon-wrap {
-    width: 4rem;
-    height: 90%;
+    width: 5rem;
+    height: 6.5rem;
   }
 
   .tiw-sub-wrap {
@@ -700,7 +700,7 @@ input:focus {
   } */
 
   .lbl-wrap-error-wrap {
-   font-size: 12px;
+    font-size: 12px;
   }
 
   .input-div-people {
