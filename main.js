@@ -25,6 +25,7 @@ function validateInputs() {
 
   if (isNaN(billAmount) || billAmount <= 0) {
     alert("Please enter a valid bill amount");
+    
     return false;
   }
 

@@ -440,6 +440,7 @@ input:focus {
   border-radius: 6px;
   border: 1px solid var(--dark-active-btn);
 }
+
 /* Styles for mobile (screen width 900px or less) */
 @media screen and (max-width: 900px) {
   .container {
@@ -624,6 +625,13 @@ input:focus {
 
   .bill-amount-txt-wrap {
     width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .bill-amount-txt-wrap p {
+    font-size: 12px;
   }
 
   .bill-amount-txt-wrap img {
@@ -666,7 +674,7 @@ input:focus {
 
   .total-amount,
   .tip-amount {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .right-reset-button {
@@ -686,8 +694,8 @@ input:focus {
   }
 
   .tiw-sub-wrap {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
   }
 
   /* .tip-circle-elm,
@@ -706,6 +714,11 @@ input:focus {
   .input-div-people {
     padding-right: 10px;
   }
+
+  .custom-tip-zero-msg {
+    height: 33%;
+    width: 90%;
+}
 }
 /* just added this as well 11/14/2024 */
 @media screen and (min-width: 900px) and (max-width: 1400px) {
